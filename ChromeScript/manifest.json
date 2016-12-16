@@ -1,0 +1,24 @@
+{
+  "name": "Security filter",
+  "description": "Looks into suspicious code in the actual web page",
+  "author": "Johnathan Steven Salamanca Lancheros",
+  "version": "2.0",
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["Securityfilter.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Looks into suspicious code in the actual web page"
+  },
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["./jquery-3.1.0.min.js"]
+    }
+  ]
+}
